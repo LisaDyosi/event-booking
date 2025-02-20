@@ -14,17 +14,6 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->enum('role', ['admin', 'organizer', 'user'])->default('user');
         });
-        
-        Schema::create('events', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->text('description');
-            $table->string('location');
-            $table->dateTime('date');
-            $table->decimal('ticket_price',8,2);
-            $table->integer('max_attendees');
-            $table->timestamps();
-        });
     }
 
     /**
@@ -32,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('events');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 };

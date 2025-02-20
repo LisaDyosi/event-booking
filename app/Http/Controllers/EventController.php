@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
+    public function dashboard() {
+        $events = Event::all(); 
+        return view('dashboard', compact('events'));
+    }
     /**
      * Display a listing of the resource.
      */
