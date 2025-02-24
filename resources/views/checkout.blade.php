@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h2>Checkout for {{ $event->name }}</h2>
-        <p>Price: ${{ $event->ticket_price }}</p>
+        <p>Price: R{{ $event->ticket_price }}</p>
         
         <a href="{{ route('payment.form', ['event' => $event->id]) }}" class="btn">Proceed to Payment</a>
     </div>

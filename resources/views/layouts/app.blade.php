@@ -12,6 +12,10 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <script src="{{ asset('js/event-slider.js') }}"></script>
+
+
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">

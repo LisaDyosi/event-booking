@@ -38,10 +38,14 @@
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
+                        <!-- My Bookings -->
+                        <x-dropdown-link :href="route('bookings.index')">
+                            {{ __('My Bookings') }}
+                        </x-dropdown-link>
+
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
@@ -84,10 +88,14 @@
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
 
+                <!-- My Bookings (Responsive) -->
+                <x-responsive-nav-link :href="route('bookings.index')">
+                    {{ __('My Bookings') }}
+                </x-responsive-nav-link>
+
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
@@ -98,3 +106,4 @@
         </div>
     </div>
 </nav>
+

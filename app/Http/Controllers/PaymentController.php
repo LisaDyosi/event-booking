@@ -27,7 +27,7 @@ class PaymentController extends Controller
             'payment_method_types' => ['card'],
             'line_items' => [[
                 'price_data' => [
-                    'currency' => 'usd',
+                    'currency' => 'zar',
                     'product_data' => ['name' => $event->name],
                     'unit_amount' => $event->ticket_price * 100,
                 ],

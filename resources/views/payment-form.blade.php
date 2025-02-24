@@ -14,7 +14,7 @@
             @csrf
             <label for="card-element">Credit or debit card</label>
             <div id="card-element" class="card-input"></div>
-            <button type="submit" class="btn">Pay ${{ $event->ticket_price }}</button>
+            <button type="submit" class="btn">Pay R{{ $event->ticket_price }}</button>
         </form>
     </div>
 

@@ -1,0 +1,313 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    background: #f03c1c;
+    padding: 2px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+.btn {
+    background: white;
+    color: #f03c1c;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn:hover {
+    background: #f03c1c;
+    color: white;
+}
+
+/* Hero Section */
+#home {
+    background: url('/images/hero-bg.webp') no-repeat center center/cover;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Events Section */
+.event-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+.event-card h3 {
+    color: #f03c1c;
+    margin-bottom: 10px;
+}
+.event-card a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #f03c1c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.event-card a:hover {
+    background: #f03c1c;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ===== DASHBOARD PAGE SPECIFIC STYLES ===== */
+.dashboard-container {
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Dashboard Page Heading */
+.dashboard-container h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Search Form */
+.dashboard-container .search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-container .search-form input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.dashboard-container .search-form button {
+    background-color: #f03c1c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.dashboard-container .search-form button:hover {
+    background-color: #c32e14;
+}
+
+/* Event Cards */
+.dashboard-container .event-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.dashboard-container .event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Event Details */
+.dashboard-container .event-card h2 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.dashboard-container .event-card p {
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Book Now Button */
+.dashboard-container .event-card a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #f03c1c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.dashboard-container .event-card a:hover {
+    background-color: #c32e14;
+}
+
+/* Event Cards Section */
+.event-carousel {
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Flexbox for Horizontal Scrolling */
+.event-cards-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+/* Individual Event Card */
+.event-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    width: 50px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 0 0 auto; /* Ensure cards don't shrink */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.event-card h2 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.event-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.event-card a {
+    background-color: #f03c1c;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+.event-card a:hover {
+    background-color: #d0311a;
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-nav button {
+    background-color: #f03c1c;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-nav button:hover {
+    background-color: #d0311a;
+}
