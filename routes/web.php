@@ -42,9 +42,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Event Routes
-Route::get('/events', [EventController::class, 'index']);
-Route::get('/events/{id}', [EventController::class, 'show']);
 
 // Booking Routes
 Route::post('/book/{event}', [BookingController::class, 'store']);
@@ -58,3 +55,6 @@ Route::get('/payment-cancel', [PaymentController::class, 'cancel'])->name('payme
 
 // Authentication Routes
 require __DIR__.'/auth.php';
+
+//fixing routes
+require __DIR__.'/organiser.php';

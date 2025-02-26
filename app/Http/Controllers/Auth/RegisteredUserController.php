@@ -15,9 +15,17 @@ use Illuminate\View\View;
 
 class RegisteredUserController extends Controller
 {
-    /**
-     * Display the registration view.
-     */
+    protected function redirectTo()
+    {
+        if (auth()->user()->role == 'admin') {
+            return route('admin.dashboard');
+        } elseif (auth()->user()->role == 'organizer') {
+            return route('organizer.dashboard');
+        } else {
+            return route('dashboard');
+        }
+    }
+    
     public function create(): View
     {
         return view('auth.register');
@@ -34,18 +42,20 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'role' => ['required', 'in:attendee,organizer'],
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $request->role,
         ]);
-
-        event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return $request->role === 'organizer'
+        ? redirect()->route('organizer.dashboard')
+        : redirect()->route('dashboard');
     }
 }

@@ -39,7 +39,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('events.create'); 
     }
 
     /**
@@ -79,14 +79,6 @@ class EventController extends Controller
 }
 
     
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Event $event)
-    {
-        return view('events.show', compact('event'));
-    }
 
     /**
      * Show the form for editing the specified resource.
