@@ -10,7 +10,9 @@
     <!-- Navbar -->
     <nav>
         <div class="container">
-            <h3>Easy Tickets</h3>
+            
+                <img src="{{ asset('images/logo.jpeg')}}" alt="Logo" class="nav-logo">
+            
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#events">Events</a></li>
