@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="event-create-container">
-    <h2>Create a New Event</h2>
+    <h2 class="event-heading">Create Event</h2>
     
     <!-- Display success or error messages -->
     @if(session('success'))
@@ -66,7 +66,7 @@
 
         <!-- Submit Button -->
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Create Event</button>
+            <button type="submit" class="btn">Create Event</button>
         </div>
     </form>
 </div>
@@ -79,8 +79,15 @@
         background-color: #f9f9f9;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 800px;
-        margin: 0 auto;
+        max-width: 500px;
+        margin: 50px auto;
+    }
+
+    .event-heading {
+        color: #f03c1c;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
     }
 
     .form-group {
@@ -97,7 +104,7 @@
 
     .btn {
         padding: 10px 20px;
-        background-color: #4CAF50;
+        background-color: #f03c1c;
         color: white;
         font-size: 1.1em;
         border: none;
@@ -107,7 +114,7 @@
     }
 
     .btn:hover {
-        background-color: #45a049;
+        background-color: #c32e14;
     }
 
     .alert {

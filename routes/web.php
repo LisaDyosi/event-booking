@@ -8,6 +8,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PaymentController;
 
+
 // Default home page
 Route::get('/', function () {
     return view('welcome');

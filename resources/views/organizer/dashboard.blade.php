@@ -39,7 +39,7 @@
     .create-event-btn {
         display: inline-block;
         padding: 12px 20px;
-        background-color: #4CAF50;
+        background-color: #f03c1c;
         color: white;
         font-size: 1.2em;
         border: none;
@@ -50,7 +50,7 @@
     }
 
     .create-event-btn:hover {
-        background-color: #45a049;
+        background-color: #f03c1c;
     }
 
     .create-event-btn:focus {

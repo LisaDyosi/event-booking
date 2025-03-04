@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @yield('styles')
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <script src="{{ asset('js/event-slider.js') }}"></script>
 

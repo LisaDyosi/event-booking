@@ -8,6 +8,7 @@ use App\Models\Event;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\BookingConfirmation;
+use Illuminate\Support\Facades\Redirect;
 
 class BookingController extends Controller
 {

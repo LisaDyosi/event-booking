@@ -10,11 +10,15 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up()
-    {
+{
     Schema::table('events', function (Blueprint $table) {
-        $table->string('image')->nullable()->after('max_attendees'); 
+        if (!Schema::hasColumn('events', 'image')) {
+            $table->string('image')->after('max_attendees')->nullable();
+        }
     });
 }
+
+
 
 
     /**
